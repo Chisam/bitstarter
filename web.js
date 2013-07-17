@@ -5,10 +5,10 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
   response.send("testing");
-  var i = fs.readFileSync("index.html");
-  response.send(i);
-  var buffer = new Buffer(fs.readFileSync("index.html"));
-  response.send(buffer);
+//  var i = fs.readFileSync("index.html");
+//  response.send(i);
+  var i = new Buffer(fs.readFileSync("index.html"));
+  response.send(buf.toString(i));
 });
 
 
