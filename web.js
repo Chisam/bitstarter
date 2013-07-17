@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
   response.send("testing");
   var i = fs.readFileSync("index.html");
   response.send(i);
-  var buffer = new Buffer(fs.readFile("index.html"));
+  var buffer = new Buffer(fs.readFileSync("index.html"));
   response.send(buffer);
 });
 
